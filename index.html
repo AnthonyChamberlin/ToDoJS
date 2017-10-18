@@ -95,13 +95,21 @@
         <label for="todo-2">Dust the vases</label>
       </li>
     </ul>
+
     <div class="footer">
       Todo: <span id="todo-count">1</span> • Done: <span id="completed-count">0</span> • Total: <span id="total-count">1</span>
     </div>
   </div>
 
   <script>
-    // JavaScript code comes here...
+    // select the element containing the count
+    var totalCount = document.getElementById('total-count');
+
+    // count the number of todo's by their class name
+    var totalTodos = document.getElementsByClassName("todo").length;
+
+    // update the HTML inside the counter element
+    totalCount.innerHTML = totalTodos;
   </script>
 
 </body>
